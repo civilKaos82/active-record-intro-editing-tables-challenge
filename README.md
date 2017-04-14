@@ -8,7 +8,7 @@
 
 In this challenge, we're going to make some small adjustments to an already existing database.  We'll need to drop a column, add a column, and rename a column.  We'll be writing Active Record migrations to make these changes.
 
-When we write Active Record migrations to create a table, we rely on the `#create_table` method inherited from the `ActiveRecord::Migration` class.  When we want to make changes to existing tables, we'll also rely on inheriting behaviors from this class; we just need to explore the api to see [which methods are available][RailsGuides Using the Change Method].
+When we write Active Record migrations to create a table, we rely on the `#create_table` method inherited from the `ActiveRecord::Migration[5.0]`) class.  When we want to make changes to existing tables, we'll also rely on inheriting behaviors from this class; we just need to explore the api to see [which methods are available][RailsGuides Using the Change Method].
 
 This challenge provides us with migrations that create the three tables:  people, ratings, and dogs.  However, they create the tables based on out-of-date expectations.  Our updated schema design—as seen in Figure 1—has three changes from the previous design:
 
@@ -17,8 +17,8 @@ This challenge provides us with migrations that create the three tables:  people
 - On the `ratings` table, the column `rater_id` is renamed to `judge_id`.
 
 ```ruby
-class RemoveWeightFromDogs < ActiveRecord::Migration
-  def change
+class RemoveWeightFromDogs < ActiveRecord::Migration[5.0]
+)  def change
     remove_column :dogs, :weight
   end
 end
@@ -66,5 +66,5 @@ In this challenge, we've demonstrated our ability to maintain a database through
 
 
 [APIDock Remove Column]: http://apidock.com/rails/ActiveRecord/ConnectionAdapters/SchemaStatements/remove_column
-[API RubyOnRails Transformations]: http://api.rubyonrails.org/classes/ActiveRecord/Migration.html#class-ActiveRecord::Migration-label-Available+transformations
+[API RubyOnRails Transformations]: http://api.rubyonrails.org/classes/ActiveRecord/Migration.html#class-ActiveRecord::Migration[5.0]-)label-Available+transformations
 [RailsGuides Using the Change Method]: http://edgeguides.rubyonrails.org/active_record_migrations.html#using-the-change-method

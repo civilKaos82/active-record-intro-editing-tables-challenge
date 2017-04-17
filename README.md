@@ -66,5 +66,5 @@ In this challenge, we've demonstrated our ability to maintain a database through
 
 
 [APIDock Remove Column]: http://apidock.com/rails/ActiveRecord/ConnectionAdapters/SchemaStatements/remove_column
-[API RubyOnRails Transformations]: http://api.rubyonrails.org/classes/ActiveRecord/Migration.html#class-ActiveRecord::Migration[5.0]-)label-Available+transformations
+[API RubyOnRails Transformations]: http://api.rubyonrails.org/classes/ActiveRecord/Migration.html#class-ActiveRecord::Migration-label-Available+transformations
 [RailsGuides Using the Change Method]: http://edgeguides.rubyonrails.org/active_record_migrations.html#using-the-change-method
